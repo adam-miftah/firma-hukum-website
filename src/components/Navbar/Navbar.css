@@ -30,11 +30,24 @@
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  font-size: 0.8em;
 }
 
-.firm-name { font-size: 0.8em; font-weight: 300; letter-spacing: 1px; }
-.firm-name-main { font-size: 1em; font-weight: 700; color: #ffffff; }
-.firm-tagline { font-size: 0.7em; color: #a0a0a0; letter-spacing: 1px; }
+.firm-name { 
+  font-size: 0.8em; 
+  font-weight: 300; 
+  letter-spacing: 1px; 
+}
+.firm-name-main { 
+  font-size: 1em; 
+  font-weight: 700; 
+  color: #ffffff; 
+}
+.firm-tagline { 
+  font-size: 0.7em; 
+  color: #a0a0a0; 
+  letter-spacing: 1px; 
+}
 
 /* Navigasi Link (FINAL) */
 .nav-links {
@@ -42,14 +55,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 30px;
+  gap: 15px;
 }
 
 .nav-links li a {
   position: relative;
   color: #e0e0e0;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 600;
   padding: 5px 0;
   transition: color 0.3s ease;
@@ -84,8 +97,8 @@
   background-color: #f0c43a;
   color: #1a1a1a;
   border: none;
-  padding: 12px 25px;
-  font-size: 0.9em;
+  padding: 8px 15px;
+  font-size: 0.7em;
   font-weight: 700;
   border-radius: 8px;
   cursor: pointer;
