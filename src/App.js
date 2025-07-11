@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
        {/* React 19 bisa merender <title> dan <meta> langsung di dalam komponen */}
-      <title>Firma Hukum | by adammiftah</title>
+      <title>Adammiftah 🚀</title>
       <meta name="description" content="Layanan konsultasi hukum profesional dari Firma Hukum Matubarda & Co." />
       <Navbar />
       <main>
