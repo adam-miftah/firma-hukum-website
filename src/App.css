@@ -93,12 +93,28 @@ section {
 /* --- HERO SECTION --- */
 .hero-section {
   height: 100vh;
-  display: flex;
+  display: flex; 
   padding: 0;
   align-items: center;
   justify-content: center;
+  position: relative; 
+  overflow: hidden;
+}
+
+.spline-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 2; 
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content h1 {
@@ -348,19 +364,17 @@ section {
 }
 
 .faq-answer.open {
-  max-height: 200px; /* Sesuaikan jika jawaban lebih panjang */
+  max-height: 200px; 
 }
 
-/* Untuk Tablet dan Perangkat Mobile (di bawah 768px) */
-@media screen and (max-width: 768px) {
 
-  /* --- Tipografi Umum --- */
+@media screen and (max-width: 768px) {
   h2 {
-    font-size: 2rem; /* Perkecil ukuran judul section */
+    font-size: 2rem; 
   }
 
   .hero-content h1 {
-    font-size: 2.5rem; /* Perkecil ukuran judul utama */
+    font-size: 2.5rem; 
   }
   
   .hero-content p {
@@ -369,25 +383,22 @@ section {
   
   /* --- Spasi Section --- */
   section {
-    padding: 60px 20px; /* Kurangi padding vertikal dan horizontal */
+    padding: 60px 20px; 
   }
 
   /* --- Section Kontak --- */
   .contact-wrapper {
-    flex-direction: column; /* Ubah layout dari berdampingan menjadi atas-bawah */
+    flex-direction: column;
   }
 
   /* --- Section FAQ --- */
   .faq-question {
-    font-size: 1rem; /* Perkecil font pertanyaan */
+    font-size: 1rem; 
   }
 }
 
-
-/* Untuk Perangkat Mobile yang Sangat Kecil (di bawah 480px) */
 @media screen and (max-width: 480px) {
 
-  /* --- Tipografi --- */
   h2 {
     font-size: 1.8rem;
   }
@@ -405,12 +416,11 @@ section {
   
   /* --- Section Hero --- */
   .hero-content {
-    /* Pastikan tombol tidak terlalu dekat */
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   .hero-content .btn-secondary {
-    margin-left: 0; /* Hapus margin kiri di mobile */
+    margin-left: 0; 
   }
 }
