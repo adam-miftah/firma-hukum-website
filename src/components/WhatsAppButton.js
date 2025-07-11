@@ -1,6 +1,6 @@
 import React from 'react';
 import './WhatsAppButton.css';
-import { FaWhatsapp } from 'react-icons/fa'; // Import ikon WhatsApp
+import { FaWhatsapp } from 'react-icons/fa'; 
 
 const WhatsAppButton = () => {
   // Ganti nomor di bawah ini dengan nomor WhatsApp Anda

@@ -10,15 +10,18 @@
   background-color: #25D366; /* Warna hijau WhatsApp */
   color: #FFF;
   border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 
   /* Memastikan ikon di atas konten lain */
   z-index: 100;
 
   /* Animasi halus saat di-hover */
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+
+  /* Perbaikan: Menggunakan Flexbox untuk centering ikon yang lebih baik */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .whatsapp-float:hover {
@@ -26,6 +29,28 @@
 }
 
 .whatsapp-icon {
-  /* Memposisikan ikon di tengah tombol */
-  margin-top: 15px;
+  /* Ukuran ikon di dalam tombol */
+  font-size: 30px;
+  /* Hapus margin-top karena sudah di-center dengan flexbox */
+}
+
+
+/* =======================================
+   STYLE RESPONSIVE UNTUK MOBILE
+   ======================================= */
+@media screen and (max-width: 768px) {
+  .whatsapp-float {
+    /* Perkecil ukuran tombol */
+    width: 50px;
+    height: 50px;
+    
+    /* Posisikan lebih dekat ke sudut */
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-icon {
+    /* Perkecil ukuran ikon */
+    font-size: 25px;
+  }
 }
