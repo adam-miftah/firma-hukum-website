@@ -1,0 +1,98 @@
+/* Container Utama Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #e0e0e0;
+  /* --- NAVBAR STICKY (FINAL) --- */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* Mencegah padding menambah lebar */
+}
+
+/* Bagian Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image {
+  height: 50px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.firm-name { font-size: 0.8em; font-weight: 300; letter-spacing: 1px; }
+.firm-name-main { font-size: 1em; font-weight: 700; color: #ffffff; }
+.firm-tagline { font-size: 0.7em; color: #a0a0a0; letter-spacing: 1px; }
+
+/* Navigasi Link (FINAL) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f0c43a;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #f0c43a;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Tombol Kontak */
+.contact-button {
+  background-color: #f0c43a;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 25px;
+  font-size: 0.9em;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #d4ab33;
+}

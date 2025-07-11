@@ -1,0 +1,31 @@
+.whatsapp-float {
+  /* Mengatur posisi agar tetap di pojok kanan bawah */
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  
+  /* Styling tombol */
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+
+  /* Memastikan ikon di atas konten lain */
+  z-index: 100;
+
+  /* Animasi halus saat di-hover */
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1); /* Sedikit membesar saat di-hover */
+}
+
+.whatsapp-icon {
+  /* Memposisikan ikon di tengah tombol */
+  margin-top: 15px;
+}

@@ -1,38 +1,352 @@
-.App {
+/* GENERAL STYLES */
+:root {
+  --primary-color: #f0c43a; /* Kuning Emas */
+  --dark-bg: #1a1a1a;
+  --dark-bg-secondary: #2c2c2c;
+  --light-text: #e0e0e0;
+  --dark-text: #1a1a1a;
+  --font-main: 'Montserrat', sans-serif; /* Ganti jika punya font spesifik */
+}
+
+/* Import Font dari Google Fonts (tambahkan di public/index.html jika perlu) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Garis bawah untuk judul section */
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+section {
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BUTTON STYLES */
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--dark-text);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--light-text);
+  border: 2px solid #fff;
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: var(--dark-text);
+}
+
+
+/* --- HERO SECTION --- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-weight: 300;
+}
+
+
+/* --- WHY US SECTION --- */
+#why-us {
+  background-color: var(--dark-bg-secondary);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.why-us-item .icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.why-us-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* --- SERVICES SECTION --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--dark-bg-secondary);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+
+/* --- ABOUT SECTION --- */
+#about {
+  background-color: var(--dark-bg-secondary);
+}
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.about-content .mission {
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+  border-left: 4px solid var(--primary-color);
+}
+
+
+/* --- TEAM SECTION --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.team-card .title {
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+
+/* --- ARTICLES SECTION --- */
+#articles {
+  background-color: var(--dark-bg-secondary);
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.article-card {
+  background-color: var(--dark-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.article-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* --- CONTACT SECTION --- */
+.contact-wrapper {
   display: flex;
-  flex-direction: column;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-form, .contact-details {
+  flex: 1;
+  min-width: 320px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: var(--light-text);
+  font-family: var(--font-main);
+}
+
+.contact-details p {
+  line-height: 2;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-details .icon {
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* --- FAQ SECTION --- */
+#faq {
+  background-color: var(--dark-bg-secondary);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #444;
+}
+
+.faq-item {
+  border-bottom: 1px solid #444;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  line-height: 1.7;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.faq-answer.open {
+  max-height: 200px; /* Sesuaikan jika jawaban lebih panjang */
 }
